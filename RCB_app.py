@@ -19,8 +19,6 @@ elif st.sidebar.button("Cant defend at chinnaswamy?"):
     df_RWAC[df_RWAC['toss_winner'].isin(["Royal Challengers Bangalore", "Royal Challengers Bengaluru"])]['toss_decision'].value_counts().plot(kind='barh')
     st.write("At chinnaswamy RCB out of the 44 matches won 39 matches while chasing and only 5 matches while defending  ")
 
-st.write("Explore the buttons in the sidebar to see the content change!")
-
 
 
 
