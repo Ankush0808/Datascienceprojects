@@ -22,7 +22,7 @@ b=st.selectbox("Select the bowling team",['Royal Challengers Bangalore', 'Kings 
        'Gujarat Titans', 'Lucknow Super Giants',
        'Royal Challengers Bengaluru'],index=0)
 c= st.slider("select the over", min_value=0,max_value=19)
-d=st.slider("select the ball",min_value=1,max_value=11)
+d=st.slider("select the ball",min_value=0,max_value=6)
 e=st.selectbox("How many wickets down?",[0,1,2,3,4,5,6,7,8,9])
 f= st.number_input("whats the score?")
 g= st.number_input("whats the target?")
@@ -66,7 +66,9 @@ i= st.selectbox("Where is the match?",['M Chinnaswamy Stadium',
        'Himachal Pradesh Cricket Association Stadium, Dharamsala',
        'Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur',
        'Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam'])
-input_data=[[a,b,c,d,e,f,g,h,i]]
+CRR=(f*6)/((c*6)+d)
+Rr=((g-h)*6)/((6*h)-((c*6)+d))
+input_data=[[a,b,e,f,g,h,i,CRR,Rr]]
 with open("C://Users//Lenovo//pipe_model.pkl", 'rb') as f:
      pipe = pickle.load(f)
 
