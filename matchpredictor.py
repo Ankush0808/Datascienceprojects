@@ -67,15 +67,18 @@ i= st.selectbox("Where is the match?",['M Chinnaswamy Stadium',
        'Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur',
        'Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam'])
 CRR=(f*6)/((c*6)+d)
-Rr=((g-h)*6)/((6*h)-((c*6)+d))
+Rr=((g-f)*6)/((6*h)-((c*6)+d))
 input_data=[[a,b,e,f,g,h,i,CRR,Rr]]
 with open("C://Users//Lenovo//pipe_model.pkl", 'rb') as f:
      pipe = pickle.load(f)
 
 if st.button("Click here to predict"):
-    prediction = pipe.predict_proba(input_data)
-    defending_prob = prediction[0][0] * 100  # Probability for the first team
-    Chasing_prob = prediction[0][1] * 100 
-    st.write(f"Win percentage for {a} would be {Chasing_prob:.2f}%")
-    st.write(f"Win percentage for {b} would be {defending_prob:.2f}%")
+    if(Rr>=36):
+           st.write("No Chance to win")
+    else:
+              prediction = pipe.predict_proba(input_data)
+              defending_prob = prediction[0][0] * 100  # Probability for the first team
+              Chasing_prob = prediction[0][1] * 100 
+              st.write(f"Win percentage for {a} would be {Chasing_prob:.2f}%")
+              st.write(f"Win percentage for {b} would be {defending_prob:.2f}%")
     
