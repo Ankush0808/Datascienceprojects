@@ -5,6 +5,7 @@ import streamlit as st
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 st.title("Welcome to IPL Match predictions")
+st.image("IPL.webp")
 a=st.selectbox("Select the batting team",['Royal Challengers Bangalore', 'Kings XI Punjab',
        'Delhi Daredevils', 'Kolkata Knight Riders', 'Rajasthan Royals',
        'Mumbai Indians', 'Chennai Super Kings', 'Deccan Chargers',
