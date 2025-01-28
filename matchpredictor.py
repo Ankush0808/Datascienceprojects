@@ -69,7 +69,7 @@ i= st.selectbox("Where is the match?",['M Chinnaswamy Stadium',
 CRR=(f*6)/((c*6)+d)
 Rr=((g-f)*6)/((6*h)-((c*6)+d))
 input_data=[[a,b,e,f,g,h,i,CRR,Rr]]
-with open("C://Users//Lenovo//pipe_model.pkl", 'rb') as f:
+with open("pipe_model.pkl", 'rb') as f:
      pipe = pickle.load(f)
 
 if st.button("Click here to predict"):
