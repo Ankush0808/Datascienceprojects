@@ -66,8 +66,14 @@ i= st.selectbox("Where is the match?",['M Chinnaswamy Stadium',
        'Himachal Pradesh Cricket Association Stadium, Dharamsala',
        'Maharaja Yadavindra Singh International Cricket Stadium, Mullanpur',
        'Dr. Y.S. Rajasekhara Reddy ACA-VDCA Cricket Stadium, Visakhapatnam'])
-CRR=(f*6)/((c*6)+d)
-Rr=((g-f)*6)/((6*h)-((c*6)+d))
+if(c==0 & d==0):
+       CRR=0
+else:
+       CRR=(f*6)/((c*6)+d)
+if (f>g or (6*h==((c*6)+d))):
+       Rr=0
+else:
+       Rr=((g-f)*6)/((6*h)-((c*6)+d))
 input_data=[[a,b,e,f,g,h,i,CRR,Rr]]
 with open("pipe_model.pkl", 'rb') as f:
      pipe = pickle.load(f)
@@ -75,6 +81,8 @@ with open("pipe_model.pkl", 'rb') as f:
 if st.button("Click here to predict"):
     if(Rr>=36):
            st.write("No Chance to win")
+    elif(Rr<=0):
+           st.write("Match is completed")
     else:
               prediction = pipe.predict_proba(input_data)
               defending_prob = prediction[0][0] * 100  # Probability for the first team
