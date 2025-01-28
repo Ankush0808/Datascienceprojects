@@ -1,5 +1,4 @@
 plotly
-numpy
-pickle
 streamlit
+numpy
 matplotlib
