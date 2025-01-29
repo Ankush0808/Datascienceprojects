@@ -75,7 +75,9 @@ if (f>g or (6*h==((c*6)+d))):
        Rr=0
 else:
        Rr=((g-f)*6)/((6*h)-((c*6)+d))
-input_data=[[a,b,e,f,g,h,i,CRR,Rr]]
+RRR=CRR-Rr
+
+input_data=[[a,b,e,f,g,h,i,CRR,Rr,RRR]]
 with open("pipe_model.pkl", 'rb') as f:
      pipe = pickle.load(f)
 
