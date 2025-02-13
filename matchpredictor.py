@@ -77,12 +77,14 @@ else:
        Rr=((g-f)*6)/((6*h)-((c*6)+d))
 RRR=CRR-Rr
 
-input_data=[[a,b,e,f,g,h,i,CRR,Rr,RRR]]
+LGIF=(6*h-((c*6)+d))*(CRR/(Rr+1))
+
+input_data=[[a,b,e,f,g,h,i,CRR,Rr,RRR,LGIF]]
 with open("pipe_model.pkl", 'rb') as f:
      pipe = pickle.load(f)
 
 if st.button("Click here to predict"):
-    if(Rr>=36):
+    if(Rr>36):
            st.write("No Chance to win")
     elif(Rr<=0):
            st.write("Match is completed")
