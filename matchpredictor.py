@@ -6,19 +6,15 @@ import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 st.title("Welcome to IPL Match predictions")
 st.image("IPL.webp")
-a=st.selectbox("Select the batting team",['Royal Challengers Bangalore', 'Kings XI Punjab',
-       'Delhi Daredevils', 'Kolkata Knight Riders', 'Rajasthan Royals',
-       'Mumbai Indians', 'Chennai Super Kings', 'Deccan Chargers',
+a=st.selectbox("Select the batting team",['Kolkata Knight Riders', 'Rajasthan Royals',
+       'Mumbai Indians', 'Chennai Super Kings',
        'Pune Warriors', 'Kochi Tuskers Kerala', 'Sunrisers Hyderabad',
-       'Rising Pune Supergiants', 'Gujarat Lions',
        'Rising Pune Supergiant', 'Delhi Capitals', 'Punjab Kings',
        'Gujarat Titans', 'Lucknow Super Giants',
        'Royal Challengers Bengaluru'],index=0)
-b=st.selectbox("Select the bowling team",['Royal Challengers Bangalore', 'Kings XI Punjab',
-       'Delhi Daredevils', 'Kolkata Knight Riders', 'Rajasthan Royals',
-       'Mumbai Indians', 'Chennai Super Kings', 'Deccan Chargers',
+b=st.selectbox("Select the bowling team",['Kolkata Knight Riders', 'Rajasthan Royals',
+       'Mumbai Indians', 'Chennai Super Kings',
        'Pune Warriors', 'Kochi Tuskers Kerala', 'Sunrisers Hyderabad',
-       'Rising Pune Supergiants', 'Gujarat Lions',
        'Rising Pune Supergiant', 'Delhi Capitals', 'Punjab Kings',
        'Gujarat Titans', 'Lucknow Super Giants',
        'Royal Challengers Bengaluru'],index=0)
