@@ -25,7 +25,7 @@ def add_bg_image(image_path):
 # Cache the state-county mapping loading
 @st.cache_data
 def load_state_county_map():
-    with open(r"C:\Users\Lenovo\state_county.json", 'r') as f:
+    with open(r"C:\Users\Lenovo\state_county_final_dict.json", 'r') as f:
         return json.load(f)
 
 # Cache the model loading
